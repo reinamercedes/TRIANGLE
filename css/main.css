@@ -2,11 +2,6 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
-section,
-header,
-footer {
-  border: 1px solid; }
-
 body {
   background: #fff;
   font-family: "Lato", sans-serif;
@@ -226,8 +221,40 @@ h3 {
     background-image: url("../images/home/tour-icon2.png"); }
 
 #features .single-features {
-  margin: 5% 0;
   padding: 20% 0;
-  border: 1px solid; }
+  margin: 5% 0;
+  padding-top: 1%; }
+
+#clients .clients img {
+  margin: auto; }
+#clients .clients-logo img {
+  margin: 10% 0; }
+
+#footer {
+  background-repeat: no-repeat;
+  background-position: 9% 92%;
+  background-image: url("../images/home/footer.png"); }
+  #footer a {
+    color: #D89B4E;
+    font-weight: bold; }
+  #footer .testimonial h2,
+  #footer .contact-info h2 {
+    font-weight: bold;
+    margin-bottom: 20%; }
+  #footer .contact-form h2 {
+    font-weight: bold;
+    margin-bottom: 20%; }
+  #footer .contact-form input,
+  #footer .contact-form textarea {
+    border-color: #D89B4E; }
+  #footer .contact-form .btn-submit {
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: #d29948;
+    box-shadow: 0px 3px 1px #A8691A; }
+  #footer .copyright-text {
+    margin: 8% 0; }
 
 /*# sourceMappingURL=main.css.map */

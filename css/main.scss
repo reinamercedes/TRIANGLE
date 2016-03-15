@@ -15,6 +15,10 @@
   border: 0;
   color: #d29948;
 }
+@mixin footersection {
+  font-weight: bold;
+  margin-bottom: 20%;
+}
 
 // variables
 $all: 100%;
@@ -23,11 +27,6 @@ $no: none;
 $Lato: 'Lato', sans-serif;
 $OpenS: 'Open Sans', sans-serif;
 
-section, 
-header, 
-footer {
-  border: 1px solid;
-}
 
 body {
     background: #fff;
@@ -316,8 +315,55 @@ h3 {
 }
 #features {
   .single-features {
-    margin: 5% 0;
     padding: 20% 0;
-    border: 1px solid;
+    margin: 5% 0;
+    padding-top: 1%;
+  }
+}
+#clients {
+  .clients {
+    img {
+      margin: auto;
+    }
+  }
+  .clients-logo {
+    img {
+      margin: 10% 0;
+    }
+  }
+}
+#footer {
+  background-repeat: no-repeat;
+  background-position: 9% 92%;
+  background-image: url("../images/home/footer.png");
+  a {
+    color: #D89B4E;
+    font-weight: bold;
+  }
+  .testimonial,
+  .contact-info {
+    h2 {
+      @include footersection;
+    }
+  }
+  .contact-form {
+    h2 {
+      @include footersection;
+    }
+    input,
+    textarea {
+      border-color: #D89B4E;
+    }
+    .btn-submit {
+      text-transform: uppercase;
+      text-align: center;
+      width: 100%;
+      color: white;
+      background-color: #d29948;
+      box-shadow: 0px 3px 1px #A8691A;
+    }
+  }
+  .copyright-text {
+      margin: 8% 0;
   }
 }
