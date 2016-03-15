@@ -10,6 +10,11 @@
   -o-transition: $time;
   transition: $time;
 }
+@mixin navbar-repetition {
+  background-color: inherit;
+  border: 0;
+  color: #d29948;
+}
 
 // variables
 $all: 100%;
@@ -17,6 +22,12 @@ $fw3: 300;
 $no: none;
 $Lato: 'Lato', sans-serif;
 $OpenS: 'Open Sans', sans-serif;
+
+section, 
+header, 
+footer {
+  border: 1px solid;
+}
 
 body {
     background: #fff;
@@ -142,6 +153,9 @@ h3 {
         padding: 20px;
         text-transform: uppercase;
         font-weight: $fw3; 
+        &:hover {
+          @include navbar-repetition;
+        }
       }
       &:last-child {
         margin-right: 20px;
@@ -150,17 +164,56 @@ h3 {
   }
   .navbar-inverse {
     .navbar-nav { 
+      & > .open {
+        & > a {
+          @include navbar-repetition;
+        }
+      }
       li { 
+        &.active {
+          & > a, 
+          & > a:focus {
+            @include navbar-repetition; 
+          }
+        }
         a:hover {
           color: #d29948; 
         }
-      }
-      li.active {
-        & > a, 
-        & > a:focus {
-          background-color: inherit;
-          border: 0;
-          color: #d29948; 
+        ul.sub-menu {
+          display: none;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          li {
+            a {
+              color: #818285;
+              padding: 5px 0;
+              font-size: 13px;
+              display: block;
+              text-transform: capitalize;
+            }
+            &:hover {
+              background: #fef7ee;
+              color: #d29948;
+            }
+            & .active {
+              background: #fef7ee;
+              color: #d29948;
+              position: relative;
+              i {
+                position: absolute;
+                font-size: 56px;
+                top: -13px;
+                color: #dab074;
+              }
+              .fa-angle.right {
+                left: -3px;
+              }
+              .fa-angle-left {
+                right: -3px;
+              }
+            }
+          }
         }
       }
     }
@@ -190,5 +243,81 @@ h3 {
   }
 }
   
+// fin-header
 
-
+#home-slider {
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  background-position: 155% 100%;
+  background-image: url("../images/home/slider-bg.png");
+  padding: 10% 0;
+  .main-slider {
+    img {
+      position: absolute;  
+    }
+    .slider-sun {
+      margin: -22% 59%;
+    }
+    .slider-house {
+      margin: -3.7% 47%;
+    }
+    .slider-cycle {
+      margin: 3.5% 33%;
+    }
+    .slider-circle1 {
+      margin: -6% 51%;
+    }
+    .slider-circle2 {
+      margin: -7.5% 52%;
+    }
+    .slider-cloud2 {
+      margin: -22% 45%;
+    }
+    .slider-cloud1 {
+      margin: -13% 54%;
+    }
+    .slider-cloud3 {
+      margin: -18% 70%;
+    }
+    .slide-text {
+      h1 {
+        font-weight: bolder;
+      }
+      p {
+        font-weight: bold;
+        margin: 3% 0;
+      }
+    }
+  }
+}
+#services {
+  .service-2 {
+    margin-top: 2%;
+  }
+  .service-3 {
+    margin-top: 6%;
+  }
+}
+#action {
+  padding: 4% 0;
+  background-color: #FBFAFA;
+  background-image: url("../images/home/tour-bg.png");
+  .tour-button {
+    margin-top: 193%;
+    margin-right: 73%;
+  }
+  .image-tour {
+    padding: 14%;
+    margin: -17% 24%;
+    width: 78.6%;
+    background-repeat: no-repeat;
+    background-image: url("../images/home/tour-icon2.png");
+  }
+}
+#features {
+  .single-features {
+    margin: 5% 0;
+    padding: 20% 0;
+    border: 1px solid;
+  }
+}
